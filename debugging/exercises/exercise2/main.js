@@ -19,7 +19,8 @@ const book2 = {
   read: "No",
 };
 
-myLibrary.push(book1;
+
+myLibrary.push(book1);
 myLibrary.push(book2);
 
 render();
@@ -28,8 +29,8 @@ addButtons.forEach((button) => {
   button.addEventListener("click", () => {
     formContainer.style.display = "block";
   });
-};
-
+});
+debugger
 function addDeleteButtons() {
   let deleteButtons = document.querySelectorAll(".delete");
 
@@ -42,6 +43,8 @@ function addDeleteButtons() {
     }
   });
 }
+
+
 
 function addReadButtons() {
   let readButtons = document.querySelectorAll(".change-read");
@@ -93,7 +96,7 @@ function render() {
 
       let titleCell = document.createElement("td");
       titleCell.append(myLibrary[i].title);
-      row.append(titleCella);
+      row.append(titleCell);
 
       let authorCell = document.createElement("td");
       authorCell.append(myLibrary[i].author);
@@ -123,6 +126,7 @@ function render() {
       let deleteB = document.createElement("button");
       let icon = document.createElement("ion-icon");
       icon.setAttribute("name", "trash-outline");
+      let deleteButton = document.createElement('button')
       deleteButton.classList.add("delete");
       deleteButton.setAttribute("type", "button");
       deleteButton.setAttribute("data-book", bookNumber);
